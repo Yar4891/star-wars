@@ -1,0 +1,25 @@
+main > .float-start {
+    box-shadow: 0.6rem 0.6rem 0.6rem gray;
+}
+
+.far-galaxy {
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.rounded-bottom-left {
+    border-bottom-left-radius: 2rem;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: 2rem;
+}
+
+
+.btn-danger {
+    background-color: var(--bg-color-danger);
+    color: var(--color-main);
+}
+
