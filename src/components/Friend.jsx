@@ -1,5 +1,3 @@
-
-
 const Friend = ({friend, pos}) => {
     let styles = "col-sm-4 p-1"
     if (pos === 9) {
