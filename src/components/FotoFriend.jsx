@@ -24,8 +24,8 @@ const fotoFriend= [
 const FotoFriend = () => {
     return (
       <div>
-          {fotoFriend.map(friend => (
-              <Friend key={friend.num} friend={friend.img} pos={friend.pos}/>
+          {fotoFriend.map((friend,num) => (
+              <Friend key={num} friend={friend.img} pos={num + 1}/>
           ))
           }
       </div>
