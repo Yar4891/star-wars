@@ -2,9 +2,9 @@ import Navigation from "./Navigation.jsx";
 
 const Header = ({changePage}) => {
     return (
-        <header className="rounded-top-5">
+        <header className="rounded-t-3xl bg-gray">
             <Navigation changePage={changePage}/>
-            <h1 className="text-center fs-1 py-4">Luke Skywalker</h1>
+            <h1 className="text-center  text-4xl py-6">Luke Skywalker</h1>
         </header>
     );
 };

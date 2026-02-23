@@ -23,12 +23,12 @@ const fotoFriend= [
 
 const FotoFriend = () => {
     return (
-      <div>
+      <>
           {fotoFriend.map((friend,num) => (
               <Friend key={num} friend={friend.img} pos={num + 1}/>
           ))
           }
-      </div>
+      </>
     )
 };
 

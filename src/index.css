@@ -1,56 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+@import "tailwindcss";
 
-:root {
+@theme {
+    --font-poller: "Poller One", sans-serif;
+    --background-image-sky: url("./assets/sky.jpg");
     --color-main: #eedb00;
-    --bg-color-gray: rgba(60, 69, 67, 0.6);
-    --bg-color-danger: rgba(204, 3, 35, 0.5);
-}
+    --color-gray: rgba(60, 69, 67, 0.6);
+    --color-danger: rgba(204, 3, 35, 0.5);
+    --shadow-hero: 0.6rem 0.6rem 0.6rem gray ;
+    }
 
-body {
-    font-family: "Poller One", sans-serif;
-    background-image: url("./assets/sky.jpg");
-    color: var(--color-main);
-    background-attachment: fixed;
-}
+@layer base {
+    body {
+        @apply font-poller bg-fixed bg-sky text-main;
 
-header, footer {
-    background-color: var(--bg-color-gray);
+    }
 }
+/*:root {*/
+/*    --color-main: #eedb00;*/
+/*    --bg-color-gray: rgba(60, 69, 67, 0.6);*/
+/*    --bg-color-danger: rgba(204, 3, 35, 0.5);*/
+/*}*/
 
-footer {
-    height: 5rem;
-}
+/*body {*/
+/*    font-family: "Poller One", sans-serif;*/
+/*    background-image: url("./assets/sky.jpg");*/
+/*    color: var(--color-main);*/
+/*    background-attachment: fixed;*/
+/*}*/
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 1.2em; /* Some padding */
-    border: 0.1em solid #ccc; /* Gray border */
-    border-radius: 0.4em; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 0.3em; /* Add a top margin */
-    margin-bottom: 1.6em; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+/*header, footer {*/
+/*    background-color: var(--bg-color-gray);*/
+/*}*/
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 1.2em 2.0em;
-    border: none;
-    border-radius: 0.4em;
-    cursor: pointer;
-}
+/*footer {*/
+/*    height: 5rem;*/
+/*}*/
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+/*!* Style inputs with type="text", select elements and textareas *!*/
+/*input[type=text], select, textarea {*/
+/*    width: 100%; !* Full width *!*/
+/*    padding: 1.2em; !* Some padding *!*/
+/*    border: 0.1em solid #ccc; !* Gray border *!*/
+/*    border-radius: 0.4em; !* Rounded borders *!*/
+/*    box-sizing: border-box; !* Make sure that padding and width stays in place *!*/
+/*    margin-top: 0.3em; !* Add a top margin *!*/
+/*    margin-bottom: 1.6em; !* Bottom margin *!*/
+/*    resize: vertical !* Allow the user to vertically resize the textarea (not horizontally) *!*/
+/*}*/
 
-/* Add a background color and some padding around the form */
-.container {
-    border-radius: 0.5em;
-    background-color: #f2f2f2;
-    padding: 2.0em;
-}
+/*!* Style the submit button with a specific background color etc *!*/
+/*input[type=submit] {*/
+/*    background-color: #04AA6D;*/
+/*    color: white;*/
+/*    padding: 1.2em 2.0em;*/
+/*    border: none;*/
+/*    border-radius: 0.4em;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* When moving the mouse over the submit button, add a darker green color *!*/
+/*input[type=submit]:hover {*/
+/*    background-color: #45a049;*/
+/*}*/
+
+/*!* Add a background color and some padding around the form *!*/
+/*.container {*/
+/*    border-radius: 0.5em;*/
+/*    background-color: #f2f2f2;*/
+/*    padding: 2.0em;*/
+/*}*/
