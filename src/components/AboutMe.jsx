@@ -47,15 +47,21 @@ const AboutMe = () => {
         return <div>{luke}</div>
     }
     return (
-        <div className="far-galaxy">
-            <div>Name: {luke.name}</div>
-            <div>Gender: {luke.gender}</div>
-            <div>Skin color: {luke.skin_color}</div>
-            <div>Hair color: {luke.hair_color}</div>
-            <div>Height: {luke.height}</div>
-            <div>Eye color: {luke.eye_color}</div>
-            <div>Mass: {luke.mass}</div>
-            <div>Birth year: {luke.birth_year}</div>
+        <div className={'text-3xl'}>
+            {Object.entries(luke).map(([key, value]) => (
+                <div key={key}>
+                    {key.replace("_", " ")}: {value}
+                </div>
+            ))}
+
+            {/*<div>Name: {luke.name}</div>*/}
+            {/*<div>Gender: {luke.gender}</div>*/}
+            {/*<div>Skin color: {luke.skin_color}</div>*/}
+            {/*<div>Hair color: {luke.hair_color}</div>*/}
+            {/*<div>Height: {luke.height}</div>*/}
+            {/*<div>Eye color: {luke.eye_color}</div>*/}
+            {/*<div>Mass: {luke.mass}</div>*/}
+            {/*<div>Birth year: {luke.birth_year}</div>*/}
         </div>
     );
 };

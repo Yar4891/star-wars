@@ -42,35 +42,65 @@ const Contact = () => {
     }
 
     return (
-        <div className="container">
-            <form>
-
-                <label htmlFor="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name.."/>
-
-                <label htmlFor="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
-
-                <label htmlFor="planet">Planet</label>
-                <select id="planet" name="planet">
+        <form
+            className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md space-y-6"
+            onSubmit={e => e.preventDefault()}>
+            <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                    First Name
+                </label>
+                <input
+                    type="text"
+                    name="firstname"
+                    placeholder="Your name.."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500
+                 focus:border-blue-500 transition"/>
+            </div>
+            <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Last Name
+                </label>
+                <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Your last name.."
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500
+                 focus:border-blue-500 transition"/>
+            </div>
+            <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Planet
+                </label>
+                <select
+                    name="planet"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500
+                 focus:border-blue-500 transition">
                     {planets.map((planet, index) => (
                         <option key={index} value={planet}>
                             {planet}
                         </option>
                     ))}
                 </select>
-
-                <label htmlFor="subject">Subject</label>
+            </div>
+            <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Subject
+                </label>
                 <textarea
-                    id="subject"
                     name="subject"
                     placeholder="Write something.."
-                    style={{height: "100px"}}/>
-
-                <input type="submit" value="Submit"/>
-
-            </form>
-        </div>
+                    rows="4"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg
+                 resize-y focus:outline-none focus:ring-2
+                 focus:ring-blue-500 focus:border-blue-500 transition"/>
+            </div>
+            <button className="bg-danger rounded-md px-3 border cursor-pointer hover:bg-red-500 hover:text-white
+            text-center" type="submit">Submit
+            </button>
+        </form>
     );
 };
 

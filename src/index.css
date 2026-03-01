@@ -13,8 +13,8 @@
 @layer base {
     body {
         @apply font-poller bg-fixed bg-sky text-main;
-
     }
+
 }
 /*:root {*/
 /*    --color-main: #eedb00;*/
